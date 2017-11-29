@@ -1,6 +1,6 @@
 {% set name = "py-ubjson" %}
-{% set version = "0.10.0" %}
-{% set sha256 = "b6d45d2cc4f1e58790a4eb1c3530fb6739fd5fd19ef2643ce090dc5878aa890e" %}
+{% set version = "0.11.0" %}
+{% set sha256 = "81784e64936c12e218afc49ff4fb90702f298ac16848971d9570c87595860762" %}
 
 package:
   name: {{ name|lower }}
