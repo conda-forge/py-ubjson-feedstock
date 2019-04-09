@@ -1,6 +1,6 @@
 {% set name = "py-ubjson" %}
-{% set version = "0.12.0" %}
-{% set sha256 = "b796cb5077a06c932f0d148f4eef4ce0f045a05cb14393177a6d034be9f8e364" %}
+{% set version = "0.13.0" %}
+{% set sha256 = "fdfcb858ba281895fa77a02cc00ae8d9da306dd758a23acf28d48dd1ed25a7d5" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
