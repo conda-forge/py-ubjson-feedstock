@@ -1,26 +1,23 @@
-{% set name = "py-ubjson" %}
 {% set version = "0.13.0" %}
-{% set sha256 = "fdfcb858ba281895fa77a02cc00ae8d9da306dd758a23acf28d48dd1ed25a7d5" %}
 
 package:
-  name: {{ name|lower }}
+  name: py-ubjson
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/p/py-ubjson/py-ubjson-{{ version }}.tar.gz
+  sha256: fdfcb858ba281895fa77a02cc00ae8d9da306dd758a23acf28d48dd1ed25a7d5
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
     - python
-    - setuptools
+    - pip
   run:
     - python
 
