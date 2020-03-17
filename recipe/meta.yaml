@@ -1,4 +1,4 @@
-{% set version = "0.14.0" %}
+{% set version = "0.15.0" %}
 
 package:
   name: py-ubjson
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/py-ubjson/py-ubjson-{{ version }}.tar.gz
-  sha256: f742c87bccc8653329d3f79b8b3f40d44d11d17cce7f6d7025a73c52ebf91c66
+  sha256: 07d314def684fb5a80c53c59ae6a3afbce73032e1317c8808a11aced178ad8b2
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -30,7 +30,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Universal Binary JSON draft-12 serializer for Python'
+  summary: Universal Binary JSON draft-12 serializer for Python
   description: |
     This is a Python v3.2+ (and 2.7+) Universal Binary JSON encoder/decoder
     based on the draft-12 specification.
