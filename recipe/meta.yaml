@@ -1,4 +1,4 @@
-{% set version = "0.15.0" %}
+{% set version = "0.16.1" %}
 
 package:
   name: py-ubjson
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/py-ubjson/py-ubjson-{{ version }}.tar.gz
-  sha256: 07d314def684fb5a80c53c59ae6a3afbce73032e1317c8808a11aced178ad8b2
+  sha256: b9bfb8695a1c7e3632e800fb83c943bf67ed45ddd87cd0344851610c69a5a482
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
